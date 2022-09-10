@@ -1,0 +1,12 @@
+{% extends 'hotel/base.html' %}
+{% block content %}
+    <article class="post">
+        
+            <time class="date">
+                {{ room.EnterDate }}
+            </time>
+        
+        <h2>{{ room.Number }}</h2>
+        <p>{{ room.AgentName|linebreaksbr }}</p>
+    </article>
+{% endblock %}

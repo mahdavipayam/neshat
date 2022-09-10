@@ -1,0 +1,11 @@
+{% extends 'hotel/base.html' %}
+{% block content %}
+ {% for room in rooms %}
+ 
+  <article>
+      <time>enter: {{ room.EnterDate }}</time>
+      <h2><a href="{% url 'room_detail' pk=room.pk %}">{{ room.Number }}</a></h2>
+      <p>{{ room.TypeRoom|linebreaksbr }}</p>
+  </article>
+{% endfor %}
+{% endblock %}
